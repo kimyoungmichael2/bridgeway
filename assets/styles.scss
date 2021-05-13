@@ -1,0 +1,34 @@
+//$primary: rgba(255, 0, 0, 1);
+$navbar-height: 7rem;
+
+@import 'bulma/bulma';
+@import 'node_modules/typeface-roboto/index.css';
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Lobster&display=swap');
+
+// Bulma Variables
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid: 
+        [row1-start] "nav main" auto [row1-end]
+        [row2-start] "misc main" auto [row2-end]
+        / 20rem auto;
+
+  .nav {
+    grid-area: nav;
+    background-color: #3C626D;
+    padding: 2rem;
+  }
+  .main {
+    grid-area: main;
+    background-color: #161925;
+  }
+  .misc {
+    grid-area: misc;
+    background-color: yellow;
+  }
+}
+
